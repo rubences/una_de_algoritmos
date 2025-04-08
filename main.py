@@ -1,4 +1,4 @@
 from caballo.lanzador import Lanzador
 
 if __name__ == "__main__":
-    lanzador.ejecutar_simulacion()
+    Lanzador.ejecutar_simulacion()
