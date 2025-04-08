@@ -1,4 +1,4 @@
-from caballo.caballos import Caballos
+from caballos import Caballos
 import random
 import time
 import sys
@@ -44,6 +44,7 @@ class Lanzador:
         total_movimientos = lanzador.calcular_movimientos_iniciales(num_movimientos)
         print(f"Total de movimientos válidos: {total_movimientos}")
 
+    @staticmethod
     def inicializar_pygame():
         """Inicializa Pygame y configura la ventana."""
         pygame.init()
@@ -94,10 +95,10 @@ class Lanzador:
         screen.blit(texto, (50, 500))
 
     def ejecutar_simulacion():
-        """Ejecuta la simulación de los movimientos del caballo."""
-        screen = inicializar_pygame()
-        colores = obtener_colores()
-        teclas_posiciones = obtener_teclas_posiciones()
+        screen = Lanzador.inicializar_pygame()
+        screen = Lanzador.inicializar_pygame()
+        colores = Lanzador.obtener_colores()
+        teclas_posiciones = Lanzador.obtener_teclas_posiciones()
         caballos = Caballos()  # Instancia de la clase Caballos para obtener movimientos
         movimientos = caballos.movimientos  # Movimientos posibles del caballo
 
